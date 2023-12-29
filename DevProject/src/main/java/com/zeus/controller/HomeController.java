@@ -1,0 +1,76 @@
+package com.zeus.controller;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.zeus.domain.Board;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+public class HomeController {
+
+	@RequestMapping(value = "/")
+	public String homeIndex() {
+		return "home";
+	}
+
+	@GetMapping(value = "/")
+	public String home(Locale locale, Model model) {
+		log.info("환영합니다. 클라이언트 지역은 " + locale + "이다.");
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		String formattedDate = dateFormat.format(date);
+		model.addAttribute("serverTime", formattedDate);
+		return "home"; // 뷰 파일명
+	}
+
+
+	@RequestMapping(value = "/ajaxHome", method = RequestMethod.GET)
+	public String ajaxHome() {
+		log.info("call ajaxHome.jsp");
+		return "ajaxHome";
+	}
+
+	@PutMapping(value = "/board/{boardNo}")
+	public ResponseEntity<String> boardModify(@PathVariable("boardNo") int boardNo, @RequestBody Board board) {
+		log.info("boardModify : " + boardNo + " " + board.toString());
+		ResponseEntity<String> entity = new ResponseEntity<String>("SUCCESS", HttpStatus.OK);
+		return entity;
+	}
+
+	@GetMapping(value = "/board/{boardNo}")
+	public ResponseEntity<Board> boardSelect(@PathVariable("boardNo") int boardNo) {
+		log.info("boardSelect : " + boardNo + " ");
+		Board board = new Board();
+		board.setBoardNo(20);
+		board.setTitle("ajaxGetTest");
+		board.setWriter("seol1");
+		board.setContent("good");
+		board.setRegDate(new Date());
+
+		ResponseEntity<Board> entity = new ResponseEntity<Board>(board, HttpStatus.OK);
+		return entity;
+	}
+	
+	@RequestMapping(value = "/registerAjaxFileUpForm", method = RequestMethod.GET)
+	public String registerAjaxFileUpForm() {
+	log.info("registerAjaxFileUpForm");
+	return "registerAjaxFileUpForm"; // 뷰 파일명
+	}
+
+	
+}

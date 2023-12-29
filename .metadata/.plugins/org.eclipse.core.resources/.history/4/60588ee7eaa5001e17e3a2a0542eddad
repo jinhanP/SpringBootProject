@@ -1,0 +1,77 @@
+package com.zeus.controller;
+
+import java.util.Date;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.zeus.domain.Member;
+
+import lombok.extern.java.Log;
+
+@Log
+@Controller
+public class MemberController {
+
+	@RequestMapping(value = "/registerForm", method = RequestMethod.GET)
+	public String registerForm() {
+		log.info("registerForm");
+
+		return "registerForm";
+	}
+
+//	@RequestMapping(value = "/registerbeans01", method = RequestMethod.POST)
+//	public String registerbeans01(Member member) {
+//		log.info("registerBeans");
+//		log.info("member.getUserId() = " + member.getUserId());
+//		log.info("member.getPassword() = " + member.getPassword());
+//		log.info("member.getCoin() = " + member.getCoin());
+//		return "success";
+//	}
+//
+//	@RequestMapping(value = "/registerbeans02", method = RequestMethod.POST)
+//	public String registerbeans02(Member member, int coin) {
+//		log.info("registerBeans");
+//		log.info("member.getUserId() = " + member.getUserId());
+//		log.info("member.getPassword() = " + member.getPassword());
+//		log.info("member.getCoin() = " + member.getCoin());
+//		log.info("coin = " + coin);
+//		return "success";
+//	}
+
+	@RequestMapping(value = "/registerByDate01", method = RequestMethod.GET)
+	public String registerByDate01(String userId, Date dateOfBirth) {
+		log.info("registerByDate01");
+		log.info("userId = " + userId);
+		log.info("dateOfBirth =" + dateOfBirth);
+		return "success";
+	}
+
+	@RequestMapping(value = "/registerbeans02", method = RequestMethod.GET)
+	public String registerbeans02(Member member) {
+		log.info("registerByDate02");
+		log.info("member.getUserId() = " + member.getUserId());
+		log.info("dateOfBirth = " + dateOfBirth);
+		return "success";
+		}
+
+	@RequestMapping(value = "/registerByDate02", method = RequestMethod.GET)
+	public String registerByDate02(Member member) {
+		log.info("registerByDate02");
+		log.info("member.getUserId() = " + member.getUserId());
+		log.info("member.getDateOfBirth() = " + member.getDateOfBirth());
+		return "success";
+	}
+
+	@RequestMapping(value = "/registerdate", method = RequestMethod.POST)
+	public String registerdate(Member member) {
+		log.info("registerByDate");
+		log.info("member.getUserId() = " + member.getUserId());
+		log.info("member.getPassword() = " + member.getPassword());
+		log.info("member.getDateOfBirth() = " + member.getDateOfBirth());
+		return "success";
+	}
+}

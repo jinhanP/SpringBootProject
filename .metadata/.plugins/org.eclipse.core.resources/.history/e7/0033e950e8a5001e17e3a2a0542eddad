@@ -1,0 +1,9 @@
+package com.zeus.domain;
+
+public class Member {
+	
+	private String userId = "hong";
+	private String userName = "홍길동";
+	private String password = "1234";
+	private int coin = 200;
+}
