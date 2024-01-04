@@ -23,11 +23,11 @@ public class CodeGroupServiceImpl implements CodeGroupService {
 	public List<CodeGroup> list() throws Exception {
 		return mapper.list();
 	}
-	
+
 	// 상세 페이지
 	@Override
-	public CodeGroup read(String groupCode) throws Exception
-	{ return mapper.read(groupCode);
+	public CodeGroup read(String groupCode) throws Exception {
+		return mapper.read(groupCode);
 	}
 
 }
