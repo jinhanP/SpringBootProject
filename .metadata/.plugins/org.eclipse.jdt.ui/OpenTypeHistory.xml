@@ -2,4 +2,5 @@
 <typeInfoHistroy>
     <typeInfo handle="=DevProject/C:\/SpringBootProject\/zulu17\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/=/maven.pomderived=/true=/&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1697057649000"/>
     <typeInfo handle="=SpringJDBCBoard/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.zeus.service{BoardService.java[BoardService" modifiers="513" timestamp="1704157644154"/>
+    <typeInfo handle="=SpringBootFileUpload/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.zeus.service{ItemService.java[ItemService" modifiers="513" timestamp="1704245812695"/>
 </typeInfoHistroy>
