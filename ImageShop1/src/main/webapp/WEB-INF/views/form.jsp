@@ -17,6 +17,7 @@
 	<%@ include file="/WEB-INF/views/common/header.jsp"%>
 	<!-- MENU AREA -->
 	<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+	
 	<!-- MAIN -->
 	
 	<!-- FOOTER AREA -->

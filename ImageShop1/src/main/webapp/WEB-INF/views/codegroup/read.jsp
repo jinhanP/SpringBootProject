@@ -3,12 +3,16 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-	
-	<!-- HEADER AREA -->
-    <%@ include file="/WEB-INF/views/common/header.jsp"%>
-    <!-- MENU AREA -->
-    <%@ include file="/WEB-INF/views/common/menu.jsp"%>
-    <!-- CONTENT AREA -->
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<!-- HEADER AREA -->
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
+<!-- MENU AREA -->
+<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+<!-- CONTENT AREA -->
+
 <h2>
 	<spring:message code="codegroup.header.read" />
 </h2>
@@ -38,25 +42,20 @@
 	</button>
 </div>
 <hr>
-	<!-- FOOTER AREA -->
-	<%@ include file="/WEB-INF/views/common/footer.jsp"%>
+<!-- FOOTER AREA -->
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 <script>
 	$(document).ready(function() {
-		//#id가 코드그룹이 변수를 formObj에 지정
 		var formObj = $("#codeGroup");
-	
 		$("#btnEdit").on("click", function() {
 			var groupCode = $("#groupCode");
 			var groupCodeVal = groupCode.val();
 			self.location = "modify?groupCode=" + groupCodeVal;
-			// modify?groupCode 여기에 groupCodeVal 주고 self.location 여기에 넘겨준다.
 		});
-		
 		$("#btnRemove").on("click", function() {
 			formObj.attr("action", "/codegroup/remove");
 			formObj.submit();
 		});
-		// #버튼리스트를 눌렀을때 list로 이동
 		$("#btnList").on("click", function() {
 			self.location = "list";
 		});

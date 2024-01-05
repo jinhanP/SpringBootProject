@@ -12,10 +12,12 @@
 	<%@ include file="/WEB-INF/views/common/header.jsp"%>
 	<!-- MENU AREA -->
 	<%@ include file="/WEB-INF/views/common/menu.jsp"%>
+	<div align="center">
 	<h1>
 		<spring:message code="common.homeWelcome" />
 	</h1>
 	<P>${serverTime}</P>
+	</div>
 	<hr>
 	<!-- FOOTER AREA -->
 	<%@ include file="/WEB-INF/views/common/footer.jsp"%>

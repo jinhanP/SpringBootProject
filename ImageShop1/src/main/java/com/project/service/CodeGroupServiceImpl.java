@@ -13,7 +13,7 @@ public class CodeGroupServiceImpl implements CodeGroupService {
 	@Autowired
 	private CodeGroupMapper mapper;
 
-	@Override // mapper 여ㅕㄴ결해주고 codeGroupmapper에 가서도 만들어준다.
+	@Override // mapper 연결해주고 codeGroupmapper에 가서도 만들어준다.
 	public void register(CodeGroup codeGroup) throws Exception {
 		mapper.create(codeGroup);
 
@@ -30,4 +30,15 @@ public class CodeGroupServiceImpl implements CodeGroupService {
 		return mapper.read(groupCode);
 	}
 
+	// 수정 처리
+	@Override
+	public void modify(CodeGroup codeGroup) throws Exception {
+		mapper.update(codeGroup);
+	}
+
+	// 삭제 처리
+	@Override
+	public void remove(String groupCode) throws Exception {
+		mapper.delete(groupCode);
+	}
 }
