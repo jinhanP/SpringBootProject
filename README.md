@@ -11,8 +11,6 @@
 
 ![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/b5488915-1b19-45e2-8ec8-43f78cbce3e3)
 
-![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/0c2ac0df-bd4b-48e4-bd91-bc786ff582fe)
-
 ![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/9bddbaca-ac06-4568-b0fb-62988f66eadb)
 
 #코드그룹 상세보기
