@@ -95,3 +95,9 @@
 ![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/56511483-186d-4b25-ba17-2f2de991b116)
 
 ![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/b5b0e568-c89c-4d3e-a610-d19e80a7917d)
+
+#게시글 삭제
+
+![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/83fadf0c-cd84-4b9f-8cce-0d402160b578)
+
+![image](https://github.com/jinhanP/SpringBootProject/assets/145731370/3ffad9a6-30dd-45d6-9f68-4b52f9e774e6)
